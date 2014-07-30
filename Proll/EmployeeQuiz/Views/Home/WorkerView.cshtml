@@ -1,0 +1,37 @@
+﻿@model EmployeeQuiz.Models.Employe
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <title>WorkerView</title>
+</head>
+<body>
+    <div class="Index">
+
+        <img src="@Url.Content(Model.PhothoPath)" alt ="Sample Image" width="300" height="300" />
+        
+
+
+        <p> <b>ID:</b>@Model.Id</p>
+
+        <p> <b>NOMBRE:</b>@Model.Name</p>
+
+        <p> <b>APELLIDOS:</b>@Model.FirstLastname @Model.SecondLastname</p>
+
+        <p> <b>SALARIO:</b>@Model.Wage</p>
+
+        <p> <b>SEXO:</b>@Model.Sex</p>
+
+        <input class="boton negro redondo" type="submit" value="Buscar otro Registro" onclick="window.location.href = 'http://localhost:7577/'" />
+
+        
+    </div>
+</body>
+</html>
